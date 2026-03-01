@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Atlas Wiki · 世界知识百科</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="gradient-bg" aria-hidden="true"></div>
+    <header class="hero">
+      <p class="tag">WORLD ATLAS WIKI</p>
+      <h1>世界知识百科</h1>
+      <p class="subtitle">
+        把地球文明装进一个页面：国家、历史、科学、艺术、语言、自然与未来。
+        这是一个可检索、可浏览、可扩展的现代 wiki 模板。
+      </p>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="搜索词条：如 中国 / 量子力学 / 非洲 / 文艺复兴" />
+        <button id="clearBtn" type="button">清空</button>
+      </div>
+      <div class="stats" id="stats"></div>
+    </header>
+
+    <main>
+      <nav class="category-nav" id="categoryNav" aria-label="分类导航"></nav>
+      <section class="grid" id="wikiGrid" aria-live="polite"></section>
+    </main>
+
+    <template id="cardTemplate">
+      <article class="card">
+        <div class="card-head">
+          <span class="chip"></span>
+          <h2></h2>
+        </div>
+        <p class="desc"></p>
+        <ul class="facts"></ul>
+      </article>
+    </template>
+
+    <footer>
+      <p>
+        说明："世界所有" 信息规模巨大，此页面提供覆盖全球主题的知识骨架与代表性条目。
+        你可继续向数组中添加词条，快速扩展为完整百科。
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
